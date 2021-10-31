@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Selenium Test Suite" parallel="false">
+<!--@parameters({"platform", "url", "browser", "browserVersion", "cloud", "envName"> maintain the sequence here-->
+    <parameter name="platform" value="windows"/>
+    <parameter name="url" value="https://www.amazon.com"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="browserVersion" value="94.0"/>
+    <!--if you gonna use for cloud & mac you can use "OS X",
+   for local you should use "mac" or "windows"-->
+    <parameter name="cloud" value="false"/>
+    <parameter name="envName" value="browserstack"/>
+
+
+    <test name="Automation tests">
+        <classes>
+            <class name="com.testpages.HomePageTest"/>
+        </classes>
+    </test>
+</suite>
